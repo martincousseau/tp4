@@ -8,6 +8,8 @@ function main() {
     tabTest();
     multiplicationTest();
 
+    cesarTest();
+
 }
 
 main();

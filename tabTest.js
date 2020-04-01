@@ -44,4 +44,12 @@ function multiplicationTest(){
 
 }
 
+function cesarTest(){
+
+    console.log(chiffrage("attaquez asterix", 3));
+    console.log(dechiffrage("dwwdtxhc dvwhula", 3));
+
+}
+
+
    
