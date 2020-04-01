@@ -4,6 +4,9 @@ function main() {
     longestTest();
     rangeTest();
     occurencesTest();
+    flatten2DTest();
+    tabTest();
+    multiplicationTest();
 
 }
 

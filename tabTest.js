@@ -24,3 +24,24 @@ console.log(nbOccurences(text, "foo")); // => 3
 console.log(nbOccurences(text, "quux")); // => 0
 console.log(nbOccurences(text, "baz")); // => 1
 }
+
+function flatten2DTest(){
+    console.log( flatten2D([[1,2], [3,4], [5,6]])); // [1, 2, 3, 4, 5, 6]
+    console.log( flatten2D([[1,2], [3,4,5], [6]])); // [1, 2, 3, 4, 5, 6]
+
+}
+
+
+function tabTest() {
+
+    array(["Bob", "Julien", "Roger"]);
+
+}
+
+function multiplicationTest(){
+
+    multiplication (5);
+
+}
+
+   
