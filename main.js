@@ -1,14 +1,16 @@
 function main() {
 
-    sumTest();
+    /*sumTest();
     longestTest();
     rangeTest();
     occurencesTest();
     flatten2DTest();
     tabTest();
-    multiplicationTest();
+    multiplicationTest();*/ 
 
     cesarTest();
+
+    viginereTest();
 
 }
 

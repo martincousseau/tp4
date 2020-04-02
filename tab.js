@@ -155,7 +155,7 @@ function chiffrage(message, cle){
         }
 
     }
-    console.log(crypte);
+    //console.log(crypte);
 
     let translation = crypte.join("");
 
@@ -208,7 +208,7 @@ function dechiffrage(message, cle){
 
     }
 
-    console.log(crypte);
+    //console.log(crypte);
 
     let translation = crypte.join("");
 
@@ -216,3 +216,206 @@ function dechiffrage(message, cle){
 
 
 }
+
+
+//exo 9
+
+function chiLetter (letter,cle){
+
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+    let crypte;
+
+    if(letter != " "){
+        
+        let index;
+
+        for (let j = 0; j < alpha.length; j++){
+
+            if(letter == alpha[j]){
+
+                index = j;
+
+            }   
+        
+        }
+
+        let ic = (index + cle)
+
+
+        if(ic >= alpha.length){
+
+            crypte = alpha[(ic) - alpha.length];
+
+        } else {
+
+            crypte = alpha[ic];
+
+        }
+
+    } else {
+
+        crypte = " ";
+    }
+
+    return crypte;
+
+}
+
+
+
+function dechiLetter(letter, cle){
+
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+    let crypte;
+
+    if(letter != " "){
+        
+        let index;
+
+        for (let j = 0; j < alpha.length; j++){
+
+            if(letter == alpha[j]){
+
+                index = j;
+
+            }   
+        
+        }
+
+        let ic = (index - cle)
+
+
+        if(ic < 0){
+
+            crypte = alpha[(ic) + alpha.length];
+
+        } else {
+
+            crypte = alpha[ic];
+
+        }
+
+    } else {
+
+        crypte = " ";
+    }
+
+    return crypte;
+
+}
+
+
+
+
+function chiffrageVi(message, cle){
+
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+    let crypte = [];
+
+    cle = cle.toString();
+
+    let tab = cle.split("");
+
+    for (let i = 0; i < tab.length; i++){
+
+        tab[i] = parseInt(tab[i]);
+
+    }
+
+    let copy = [].concat(tab);
+
+    let n = message.length / tab.length;
+
+    for (let i = 0; i < n; i++){
+
+        tab = tab.concat(copy);
+        
+    }
+
+
+
+    for(let i = 0; i < message.length; i++){
+
+        if(message[i] == " "){
+
+            tab.splice(i,0," ");
+
+        } else {
+
+
+        }
+    }
+
+    for (let i = 0; i < message.length; i++){
+
+        crypte[i] = chiLetter(message[i],tab[i]);
+
+    }
+
+    //console.log(crypte);
+
+    let translation = crypte.join("");
+
+    return translation;
+    
+} 
+
+
+
+
+function dechiffrageVi(message, cle){
+
+    let alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+    let crypte = [];
+
+    cle = cle.toString();
+
+    let tab = cle.split("");
+
+    for (let i = 0; i < tab.length; i++){
+
+        tab[i] = parseInt(tab[i]);
+
+    }
+
+    let copy = [].concat(tab);
+
+    let n = message.length / tab.length;
+
+    for (let i = 0; i < n; i++){
+
+        tab = tab.concat(copy);
+        
+    }
+
+
+
+    for(let i = 0; i < message.length; i++){
+
+        if(message[i] == " "){
+
+            tab.splice(i,0," ");
+
+        } else {
+
+
+        }
+    }
+
+    for (let i = 0; i < message.length; i++){
+
+        crypte[i] = dechiLetter(message[i],tab[i]);
+
+    }
+
+    //console.log(crypte);
+
+    let translation = crypte.join("");
+
+    return translation;
+    
+} 

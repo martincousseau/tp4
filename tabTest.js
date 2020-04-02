@@ -51,5 +51,14 @@ function cesarTest(){
 
 }
 
+function viginereTest(){
+
+    console.log(chiLetter("z",3));
+
+    console.log(chiffrageVi("attaquez asterix",314));
+
+    console.log(dechiffrageVi("duxdryha evuiujb", 314))
+}
+
 
    
